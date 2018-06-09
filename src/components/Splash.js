@@ -11,6 +11,7 @@ const Splash = () => {
 
     return(
     <div className="imageGallery">
+        <div>
         <ImageGallery 
             items={images} 
             autoPlay={true} 
@@ -19,6 +20,10 @@ const Splash = () => {
             showPlayButton={false}
             slideInterval={5000}
         />
+        </div>
+        <div>
+            loren ipsum text ehre for now i guess
+        </div>
     </div>)
 }
 

@@ -28,6 +28,42 @@
 }
 
 .imageGallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
   width: 500px;
   height: 500px;
+}
+
+.contacts{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  min-width: 1300px; 
+}
+
+.generalContacts{
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.socialMediaContacts{
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.headerLinks{
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 1200px;
+  height: 80px;
+  line-height: 80px;
 }
