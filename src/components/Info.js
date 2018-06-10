@@ -1,8 +1,5 @@
 import React from 'react';
 
-const Info = () => {
-
-    return(<div>info</div>)
-}
+const Info = () => <div>info</div>;
 
 export default Info;

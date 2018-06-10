@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Code = () => {
-
-    return(<div>code</div>)
+class Code extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    const repos = [];
+    return (
+      <div>
+        <div className="featuredRepo">
+          <div className="featuredRepoText" />
+          <div className="featuredRepoRepo" />
+        </div>
+        <div>{repos}</div>
+      </div>
+    );
+  }
 }
 
 export default Code;

@@ -4,16 +4,32 @@
   "private": true,
   "dependencies": {
     "react": "^16.4.0",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.0",
-    "react-image-gallery": "^0.8.8",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "eslint": "^4.18.1",
+    "eslint-plugin-prettier": "^2.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/eslint/bin/eslint.js -c ./.eslintrc  src/* __tests__/* --fix"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^8.1.2",
+    "babel-jest": "22.0.4",
+    "babel-preset-env": "^1.5.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "2.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "prettier": "^1.9.2"
   }
 }
