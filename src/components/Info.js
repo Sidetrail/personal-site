@@ -5,24 +5,24 @@ const Info = () => (
     <div className="infoIntroContainer">
       <div className="infoPicture">pic</div>
       <div>
-        <dl htmlFor="name" className="infoNameTitle">
+        <div htmlFor="name" className="infoNameTitle">
           John Williams
-        </dl>
-        <dl className="infoIntroText">Intro text</dl>
+        </div>
+        <div className="infoIntroText">Intro text</div>
       </div>
     </div>
     <div>
       <div>
-        <dl>Videos</dl>
-        <dl>Video text</dl>
+        <div>Videos</div>
+        <div>Video text</div>
       </div>
       <div>
-        <dl>Programming</dl>
-        <dl>coding text</dl>
+        <div>Programming</div>
+        <div>coding text</div>
       </div>
       <div>
-        <dl>Pictures</dl>
-        <dl>picture text</dl>
+        <div>Pictures</div>
+        <div>picture text</div>
       </div>
     </div>
   </div>
