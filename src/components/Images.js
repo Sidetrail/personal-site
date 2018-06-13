@@ -8,8 +8,8 @@ const Images = () => {
       <div className="imagepageHeader" />
       <div className="featuredImageContainer">
         <div className="featuredText">
-          <label className="featuredTextTitle">some title text</label>
-          <label className="featuredTextBody">
+          <dl className="featuredTextTitle">some title text</dl>
+          <dl className="featuredTextBody">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
             sollicitudin at risus eget convallis. Quisque bibendum orci ligula,
             ut dictum leo tristique in. Curabitur eget nibh aliquam libero
@@ -28,7 +28,7 @@ const Images = () => {
             consectetur. Aenean vitae eros ac mauris malesuada sollicitudin.
             Suspendisse et nulla ut mauris laoreet gravida. Nullam vel nisl
             vitae justo eleifend rutrum imperdiet eget eros.
-          </label>
+          </dl>
         </div>
         <div className="featuredImage">
           <img

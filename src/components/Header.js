@@ -8,30 +8,30 @@ const Header = () => (
       <Navbar.Header>
         <Navbar.Brand>
           <Link to="/">
-            <label>HeaderImage</label>
+            <dl>HeaderImage</dl>
           </Link>
         </Navbar.Brand>
       </Navbar.Header>
       <Nav>
         <NavItem eventKey={1} href="#">
           <Link to="/info">
-            <label>Info</label>
+            <dl>Info</dl>
           </Link>
         </NavItem>
         <NavItem eventKey={2} href="#">
           <Link to="/code">
-            <label>Code</label>
+            <dl>Code</dl>
           </Link>
         </NavItem>
         <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
           <MenuItem eventKey={3.1}>
             <Link to="/images">
-              <label>Images</label>
+              <dl>Images</dl>
             </Link>
           </MenuItem>
           <MenuItem eventKey={3.2}>
             <Link to="/videos">
-              <label>Videos</label>
+              <dl>Videos</dl>
             </Link>
           </MenuItem>
           <MenuItem eventKey={3.3} />
@@ -40,7 +40,7 @@ const Header = () => (
         </NavDropdown>
         <NavItem>
           <Link to="/contact">
-            <label>Contact</label>
+            <dl>Contact</dl>
           </Link>
         </NavItem>
       </Nav>

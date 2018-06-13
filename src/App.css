@@ -62,6 +62,7 @@
 }
 
 .headerLinks{
+  font-size: 25px;
   display: flex;
   padding-left: 50px;
   padding-right: 50px;
