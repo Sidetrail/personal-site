@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, NavItem, MenuItem } from 'react-bootstrap';
+import profilepic from '../Resources/Images/profilepic.jpg';
 
 const Header = () => (
   <div className="headerLinks">
-    <Navbar fixedTop>
+    <Navbar fixedTop className="headerBar">
       <Navbar.Header>
         <Navbar.Brand>
           <Link to="/">
-            <div>HeaderImage</div>
+            <img src={profilepic} className="headerImage" alt="Header" />
           </Link>
         </Navbar.Brand>
       </Navbar.Header>
-      <Nav>
+      <Nav className="headerLinks">
         <NavItem eventKey={1} href="#">
           <Link to="/info">
             <div>Info</div>

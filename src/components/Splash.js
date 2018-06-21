@@ -2,8 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
 const Splash = () => {
-
-    const images = [
+  const images = [
     { original: 'https://i.imgur.com/ppqan5G.jpg' },
     {
       original:
