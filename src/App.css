@@ -92,7 +92,7 @@
 }
 
 .headerLinks{
-  font-size: 25px;
+  font-size: 35px;
   padding-left: 50px;
   padding-right: 50px;
   height: 75px;
@@ -101,4 +101,35 @@
 
 .headerBar{
   height: 75px;
+}
+
+.infoShortDesc{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 100px; 
+  padding-right: 100px;
+  font-family: Lato; 
+}
+
+.infoDescTitle{
+  font-size: 22px;
+  text-align: center;
+}
+
+.infoDescBody{
+  font-size: 16px;
+}
+
+.infoIntroContainer{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.infoIntroText{
+  
+}
+
+.infoNameTitle{
+  text-align: center;
 }
