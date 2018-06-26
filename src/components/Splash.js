@@ -10,15 +10,6 @@ const Splash = () => {
     },
   ];
 
-  // <ImageGallery
-  //         items={images}
-  //         autoPlay={true}
-  //         showThumbnails={false}
-  //         showFullscreenButton={false}
-  //         showPlayButton={false}
-  //         slideInterval={5000}
-  //     />
-
   return (
     <div className="imageGallery">
       <div>
@@ -57,7 +48,7 @@ const Splash = () => {
           </Carousel.Item>
         </Carousel>
       </div>
-      <div>loren ipsum text ehre for now i guess</div>
+      <div>loren ipsum text ehre for now i guess test</div>
     </div>
   );
 };
