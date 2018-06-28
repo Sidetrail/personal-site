@@ -133,3 +133,22 @@
 .infoNameTitle{
   text-align: center;
 }
+
+.repoContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.repoCard{
+  margin: 15px;
+}
+
+.repoCardName{
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.repoCardLastUpdated{
+  font-size: 15px;
+}

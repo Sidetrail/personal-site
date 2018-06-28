@@ -42,7 +42,7 @@ class Code extends Component {
           <div className="featuredRepoRepo" />
         </div>
         <div className="filterButtons">{this.filterButtons}</div>
-        <div>{this.state.repoDisplay}</div>
+        <div className="repoContainer">{this.state.repoDisplay}</div>
       </div>
     );
   }

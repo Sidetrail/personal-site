@@ -36,17 +36,25 @@ class RepoCard extends Component {
 
   render() {
     return (
-      <div>
-        <div>{this.repo.name}</div>
-        <div>{new Date(this.repo.updated_at).toString()}</div>
+      <div className="repoCard">
+        <div className="repoCardName">{this.repo.name}</div>
+        <div className="repoCardLastUpdated">
+          Last Updated:{' '}
+          {`${new Date(this.repo.updated_at).getFullYear()}/${new Date(
+            this.repo.updated_at,
+          ).getMonth() + 1}/${new Date(this.repo.updated_at).getDate()}`}
+        </div>
         <div className="codeRepoLanguages">
           <div>Languages</div>
           <div>Main: {this.repo.language}</div>
-          <div>Other Languages: {this.state.languages}</div>
+          <div>
+            Other Languages:{' '}
+            {this.state.languages ? this.state.languages.join(', ') : null}
+          </div>
           <div>
             Language Share:{' '}
             {this.state.languagePercents
-              ? this.state.languagePercents.join(' ')
+              ? `${this.state.languagePercents.join('%, ')}%`
               : null}
           </div>
         </div>
