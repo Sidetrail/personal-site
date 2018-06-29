@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import PieChart from 'react-svg-piechart';
+
+const languageColors = { 'C++': '#FF3333', JavaScript: '#335EFF' };
 
 class RepoCard extends Component {
   constructor(props) {
@@ -19,9 +22,15 @@ class RepoCard extends Component {
       for (const i in values[0]) {
         maxBits += values[0][i];
       }
+      const piechartdata = [];
       console.log('reduce', maxBits);
       const langaugePercentages = [];
       for (const i in values[0]) {
+        piechartdata.push({
+          title: i,
+          value: values[0][i],
+          color: languageColors[i] || '#FFFFFF',
+        });
         langaugePercentages.push(
           Math.floor((values[0][i] / maxBits) * 1000) / 10,
         );
@@ -29,12 +38,14 @@ class RepoCard extends Component {
       this.setState({
         languages: Object.keys(values[0]),
         languagePercents: langaugePercentages,
+        piechartdata,
       });
       console.log('values:', values[0]);
     });
   };
 
   render() {
+    console.log('state', this.state);
     return (
       <div className="repoCard">
         <div className="repoCardName">{this.repo.name}</div>
@@ -57,6 +68,11 @@ class RepoCard extends Component {
               ? `${this.state.languagePercents.join('%, ')}%`
               : null}
           </div>
+          <PieChart
+            data={this.state.piechartdata}
+            expandOnHover
+            viewBoxSize={50}
+          />
         </div>
       </div>
     );
