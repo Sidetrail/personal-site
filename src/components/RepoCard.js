@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import PieChart from 'react-svg-piechart';
 
-const languageColors = { 'C++': '#FF3333', JavaScript: '#335EFF' };
+const languageColors = {
+  'C++': '#f34b7d',
+  JavaScript: '#f1e05a',
+  HTML: '#e34c26',
+  CSS: '#563d7c',
+};
 
 class RepoCard extends Component {
   constructor(props) {
@@ -46,6 +51,16 @@ class RepoCard extends Component {
 
   render() {
     console.log('state', this.state);
+    const languageArr = this.state.languages
+      ? this.state.languages.map((i, index) => (
+          <div>
+            {i}:{' '}
+            {this.state.langaugePercentages
+              ? this.state.langaugePercentages[index]
+              : null}
+          </div>
+        ))
+      : null;
     return (
       <div className="repoCard">
         <div className="repoCardName">{this.repo.name}</div>
@@ -56,23 +71,17 @@ class RepoCard extends Component {
           ).getMonth() + 1}/${new Date(this.repo.updated_at).getDate()}`}
         </div>
         <div className="codeRepoLanguages">
-          <div>Languages</div>
-          <div>Main: {this.repo.language}</div>
-          <div>
-            Other Languages:{' '}
-            {this.state.languages ? this.state.languages.join(', ') : null}
+          <div className="lanugagesTitle">Languages</div>
+          <div className="languagesChartAndTable">
+            <div className="languagesTable">{languageArr}</div>
+            <div className="chartContainer">
+              <PieChart
+                data={this.state.piechartdata}
+                expandOnHover
+                viewBoxSize={50}
+              />
+            </div>
           </div>
-          <div>
-            Language Share:{' '}
-            {this.state.languagePercents
-              ? `${this.state.languagePercents.join('%, ')}%`
-              : null}
-          </div>
-          <PieChart
-            data={this.state.piechartdata}
-            expandOnHover
-            viewBoxSize={50}
-          />
         </div>
       </div>
     );
