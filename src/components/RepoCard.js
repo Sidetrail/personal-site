@@ -51,35 +51,42 @@ class RepoCard extends Component {
 
   render() {
     console.log('state', this.state);
-    const languageArr = this.state.languages
-      ? this.state.languages.map((i, index) => (
-          <div>
-            {i}:{' '}
-            {this.state.langaugePercentages
-              ? this.state.langaugePercentages[index]
-              : null}
-          </div>
-        ))
-      : null;
+    const languageArr = [];
+    for (
+      let i = 0;
+      this.state.languages && i < this.state.languages.length;
+      i++
+    ) {
+      languageArr.push(
+        <div className="languageData">
+          {this.state.languages[i]}: {this.state.languagePercents[i]}%
+        </div>,
+      );
+    }
     return (
       <div className="repoCard">
         <div className="repoCardName">{this.repo.name}</div>
-        <div className="repoCardLastUpdated">
-          Last Updated:{' '}
-          {`${new Date(this.repo.updated_at).getFullYear()}/${new Date(
-            this.repo.updated_at,
-          ).getMonth() + 1}/${new Date(this.repo.updated_at).getDate()}`}
-        </div>
         <div className="codeRepoLanguages">
-          <div className="lanugagesTitle">Languages</div>
-          <div className="languagesChartAndTable">
-            <div className="languagesTable">{languageArr}</div>
-            <div className="chartContainer">
-              <PieChart
-                data={this.state.piechartdata}
-                expandOnHover
-                viewBoxSize={50}
-              />
+          <div className="repoInfoContainer">
+            <div className="repoContainerLeft">
+              <div className="repoDescription">readmetext goes here</div>
+              <div className="chartContainer">
+                <PieChart
+                  data={this.state.piechartdata}
+                  expandOnHover
+                  viewBoxSize={50}
+                />
+              </div>
+            </div>
+            <div className="repoContainerRight">
+              <div className="repoCardLastUpdated">
+                Last Updated:{' '}
+                {`${new Date(this.repo.updated_at).getFullYear()}/${new Date(
+                  this.repo.updated_at,
+                ).getMonth() + 1}/${new Date(this.repo.updated_at).getDate()}`}
+              </div>
+              <div className="languagesTableTitle">Languages</div>
+              <div className="languagesTable">{languageArr}</div>
             </div>
           </div>
         </div>
