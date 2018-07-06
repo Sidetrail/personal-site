@@ -5,18 +5,22 @@ const Contact = () => (
     <div>Contact image</div>
     <div className="contacts">
       <div className="socialMediaContacts">
-        <div>Collumn Title: Social Media?</div>
-        <div>Twitter</div>
-        <div>LinkedIn</div>
-        <div>Reddit</div>
-        <div>Instagram</div>
+        <div className="contactCollumnTitle">Social Media</div>
+        <div className="contactLinks">
+          <div>Twitter</div>
+          <div>LinkedIn</div>
+          <div>Reddit</div>
+          <div>Instagram</div>
+        </div>
       </div>
       <div className="generalContacts">
-        <div>Collumn Title: General Contacts?</div>
-        <div>Email</div>
-        <div>GitHub</div>
-        <div>Patreon</div>
-        <div>Youtube</div>
+        <div className="contactCollumnTitle">Contact Directly</div>
+        <div className="contactLinks">
+          <div>Email</div>
+          <div>GitHub</div>
+          <div>Patreon</div>
+          <div>Youtube</div>
+        </div>
       </div>
     </div>
   </div>
